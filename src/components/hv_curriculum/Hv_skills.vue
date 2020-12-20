@@ -4,11 +4,12 @@
       <p class="w3-large w3-margin-top">
         <b
           ><i
-            :class="`fa fa-asterisk fa-fw w3-margin-right w3-text-${color}`"
+            :class="`fa fa-asterisk fa-fw w3-margin-right w3-text-blue`"
           ></i
           >Skills</b
         >
       </p>
+
       <div
         class="w3-col skill_barras"
         v-for="(skill, i) in skills"
@@ -16,7 +17,7 @@
       >
         <p>{{ skill.name }}</p>
         <div
-          :class="`w3-container w3-center w3-round-xlarge w3-${color}`"
+          :class="`w3-container w3-center w3-round-xlarge w3-blue`"
           :style="'width:' + skill.size + ''"
         >
           {{ skill.size }}
@@ -29,7 +30,7 @@
       <p class="w3-large">
         <b
           ><i
-            :class="`fa fa-asterisk fa-fw w3-margin-right w3-text-${color}`"
+            :class="`fa fa-asterisk fa-fw w3-margin-right w3-text-blue`"
           ></i
           >Idiomas</b
         >
@@ -41,8 +42,8 @@
       >
         <p>{{ language.name }}</p>
         <div
-          :class="`w3-container w3-center w3-round-xlarge w3-${color}`"
-          :style="'width:' + language.size + ''"
+          :class="`w3-container w3-center w3-round-xlarge w3-blue `"
+          :style="`width: ${language.size}`"
         >
           {{ language.size }}
         </div>
@@ -83,15 +84,18 @@ export default {
       ],
     };
   },
+  mounted() {
+
+  },
 };
 </script>
 
 <style>
 .lang_barras{
-  width:44%;
+  width:30% !important;
 }
 .skill_barras{
-  width:20%;
+  width:20% !important;
 } 
 @media only screen and (max-width: 600px) {
   .lang_barras {
