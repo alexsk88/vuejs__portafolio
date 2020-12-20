@@ -17,7 +17,7 @@
         <div class="w3-center w3-container">
           <br />
           <img
-            src="@/assets/img/portfolio/avatar.jpeg"
+            src="/assets/img/portfolio/avatar.jpeg"
             alt="Avatar"
             class="img_avatar w3-circle w3-margin-top"
           />
