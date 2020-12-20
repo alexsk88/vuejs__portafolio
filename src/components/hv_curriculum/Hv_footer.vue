@@ -1,5 +1,5 @@
 <template>
-  <footer :class="`w3-container w3-${color} w3-center w3-margin-top`">
+  <footer :class="`w3-container w3-${color} w3-center `">
   <p>Find me on social media.{{color}} </p>
   <i class="fa fa-facebook-official w3-hover-opacity"></i>
   <i class="fa fa-instagram w3-hover-opacity"></i>

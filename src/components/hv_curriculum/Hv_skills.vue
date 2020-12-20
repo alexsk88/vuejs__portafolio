@@ -1,5 +1,5 @@
 <template>
-  <div class="w3-container w3-card w3-white w3-margin-bottom">
+  <div :class="`w3-container ${color} nmb7`">
     <div class="w3-row">
       <p class="w3-large w3-margin-top">
         <b

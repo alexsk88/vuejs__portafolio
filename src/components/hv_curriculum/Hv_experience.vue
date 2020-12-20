@@ -1,23 +1,28 @@
 <template>
-  <div class="w3-container w3-card w3-white w3-margin-bottom">
-    <h2 class="w3-text-grey w3-padding-16">
-      <i
-        :class="
-          `fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-${color}`
-        "
-      ></i
-      >Work Experience
+  <div :class="`w3-container w3-margin-bottom ${color}` ">
+    <div class="w3-row">
+      <div class="w3-col" style="width:50%">
+        <h2 class="w3-text-grey w3-padding-16">
+      <i :class="`fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-light-blue`"></i>Work Experience
     </h2>
+      </div>
+      <div class="w3-col" style="width:20%">
+        <!-- <img src="https://www.w3schools.com/w3images/avatar_hat.jpg" class="img__headercard"  alt=""> -->
+      </div>
+      
+  
+    </div>
+
     <div class="w3-container" v-for="(job, i) in jobs" :key="`job-${i}`">
       <h5 class="w3-opacity">
         <b>{{ job.name }}</b>
       </h5>
-      <h6 :class="`w3-text-${color}`">
-        <i class="fa fa-calendar fa-fw w3-margin-right"></i
+      <h6 :class="``">
+        <i class="fa fa-calendar fa-fw w3-margin-right w3-text-light-blue"></i
         >{{ job.datestart }} - {{ job.current != "true" ? job.dateend : "" }}
         <span
           v-if="job.current == 'true'"
-          :class="`w3-tag w3-${color} w3-round`"
+          :class="`w3-tag w3-light-blue w3-round w3-text-white`"
           >{{ job.dateend }}</span
         >
       </h6>
@@ -39,9 +44,8 @@ export default {
           datestart: "2020",
           current: "true",
           dateend: "ACTUAL",
-          desc: `Desarrollo de funcionalidadaes web con Ruby on Rails y VUEJS, Rest API/SOAP`,
+          desc: `Desarrollo de funcionalidadaes web con Ruby on Rails( Rest API,ror) y VUEJS`,
         },
-
         {
           name: "Freelance",
           datestart: "2017",
@@ -59,14 +63,13 @@ export default {
           name: "Freelance",
           datestart: "2015",
           dateend: "2016",
-          desc: `Desarrollo de aplicaciones web con Angular y Firebase, php`,
+          desc: `Desarrollo de aplicaciones web con Angular y Firebase, codeigniter`,
         },
-
         {
           name:"Auxiliar de Soporte (Distribuidora de Ropa Los Pasitos de Nick)",
           datestart: "2014",
           dateend: "2015",
-          desc: `Funciones: Manejar Equipo de Computo`,
+          desc: `Soporte de Equipo de Computo, invenario`,
         },
       ],
     };
@@ -74,4 +77,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.img__headercard{
+  height: 100px;
+  width: 500px;
+}
+
+</style>
