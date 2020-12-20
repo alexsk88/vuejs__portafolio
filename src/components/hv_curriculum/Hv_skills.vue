@@ -10,8 +10,7 @@
         >
       </p>
       <div
-        class="w3-col"
-        style="width:20%"
+        class="w3-col skill_barras"
         v-for="(skill, i) in skills"
         :key="`skill-${i}`"
       >
@@ -36,8 +35,7 @@
         >
       </p>
       <div
-        class="w3-col"
-        style="width:44%"
+        class="w3-col lang_barras"
         v-for="(language, i) in languages"
         :key="`language-${i}`"
       >
@@ -88,4 +86,19 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.lang_barras{
+  width:44%;
+}
+.skill_barras{
+  width:20%;
+} 
+@media only screen and (max-width: 600px) {
+  .lang_barras {
+      width:100%;
+  }
+  .skill_barras{
+    width:100%;
+  } 
+}
+</style>

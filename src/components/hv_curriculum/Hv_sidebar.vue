@@ -1,6 +1,6 @@
 <template>
   <div class="w3-third">
-    <div class="w3-white w3-text-grey w3-card-4" style="position:fixed;">
+    <div class="w3-white w3-text-grey w3-card-4 menu__avatat" >
       <div class="w3-display-container">
         <div class="w3-center w3-container w3-text-black"><br/>
           <img src="https://www.w3schools.com/w3images/avatar_hat.jpg" alt="Avatar" class="img_avatar w3-circle w3-margin-top">
@@ -43,5 +43,12 @@ export default {
   width:250px;
   height:250px;
 }
-
+.menu__avatat{
+  position: fixed;
+}
+@media only screen and (max-width: 600px) {
+  .menu__avatat {
+     position: relative;
+  }
+}
 </style>
