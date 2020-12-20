@@ -17,7 +17,7 @@
         <div class="w3-center w3-container">
           <br />
           <img
-            :src="avatar_s"
+            src="@/assets/img/portfolio/avatar.jpeg"
             alt="Avatar"
             class="img_avatar w3-circle w3-margin-top"
           />
@@ -41,7 +41,6 @@
 </template>
 
 <script>
-import avatar from '../../assets/img/portfolio/avatar.jpeg'
 export default {
   name: "sidebar",
   props: ["color"],
@@ -49,7 +48,6 @@ export default {
   data() {
     return {
       mode: true,
-      avatar_s: avatar,
       nameuser: "Alexander Nova Arevalo",
       users: [
         { name: "Developer FrontEnd", icon: "fa fa-briefcase fa-fw" },
